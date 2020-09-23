@@ -3,6 +3,7 @@
 void main (void)
 {
 	printf("I am jc");
-	printf("Iam JC2");
+	printf("I am GM");
 	printf("Clase libre");
+	printf("Programacion");
 }
