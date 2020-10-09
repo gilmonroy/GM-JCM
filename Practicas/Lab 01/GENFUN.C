@@ -29,6 +29,9 @@ void main(void)
 {
 	printf("Testing Genfun_vCapsOn\n");
 	uint8 au8BufferTest[12] = "HElLO WOrLd";
+	printf("Buffer before function%s\n",au8BufferTest );
+	Genfun_vCapsoff(&au8BufferTest[0],12);
+	printf("Buffer after function%s\n",au8BufferTest );
 }
 void void Genfun_vCapsOn (uint8 *pu8Src, uint8 u8SizeOfflist)
 {
@@ -46,3 +49,11 @@ void void Genfun_vCapsOn (uint8 *pu8Src, uint8 u8SizeOfflist)
 		u8Sizeofflist -- ;
 	}
 }
+ int main(void)
+ {
+ printf("\n\t Escriba una oracion");
+ }
+ uint8 GENFUN_u8GetOccurence (uint8 *pu8Src, uint8 u8Target, uint8 u8SizeOfList)
+ 
+
+
