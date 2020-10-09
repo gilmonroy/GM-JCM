@@ -24,3 +24,25 @@ void Genfun_vCapsoff (uint8 *pu8Src, uint8 u8SizeOfflist)
 	    u8Sizeofflist --;
 	}
 }
+
+void main(void)
+{
+	printf("Testing Genfun_vCapsOn\n");
+	uint8 au8BufferTest[12] = "HElLO WOrLd";
+}
+void void Genfun_vCapsOn (uint8 *pu8Src, uint8 u8SizeOfflist)
+{
+	while( u8Sizeofflist!=0)
+	{
+		if(*pu8Src>=ASCII_High_THRESHHOLD_CAPSON_TO_On && *pu8Srcz=ASCII_Low_THRESHHOLD_CAPSON_TO_On)
+		{
+			*pu8Src-=ASCII_CONVERTION_FACTOR;
+		}
+		else
+		{
+			/*Nothing to do */
+		}
+		pu8Src++;
+		u8Sizeofflist -- ;
+	}
+}
