@@ -204,7 +204,7 @@ int main()
 
 
 /*septimo programa*/
-void sort(int n, int* ptr) 
+ void GENFUN_vSortList (uint8 *pu8Src, uint8 *pu8Dest, uint8 u8SizeOfList) 
 { 
     int i, j, t; 
   
@@ -213,11 +213,11 @@ void sort(int n, int* ptr)
   
         for (j = i + 1; j < n; j++) { 
   
-            if (*(ptr + j) < *(ptr + i)) { 
+            if (*(pu8Src + j) < *(pu8Dest + i)) { 
   
-                t = *(ptr + i); 
-                *(ptr + i) = *(ptr + j); 
-                *(ptr + j) = t; 
+                t = *(pu8Src + i); 
+                *(pu8Src + i) = *(pu8Dest + j); 
+                *(pu8Dest + j) = t; 
             } 
         } 
     } 
@@ -230,7 +230,7 @@ void sort(int n, int* ptr)
 // Driver code 
 int main() 
 { 
-    int n = 5; 
+    int u8Sizeofflist = 5; 
     int arr[] = { 0, 23, 14, 12, 9 }; 
   
     sort(n, arr); 
