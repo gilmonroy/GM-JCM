@@ -135,14 +135,15 @@ int main()
 { 
     char str[50] = "GeeksForGeeks is for programming geeks."; 
     printf("\nBefore memset(): %s\n", str); 
+    char *pu8Src= (&str);
   
     // Fill 8 characters starting from str[13] with '.' 
     memset(str + 13, '.', 8*sizeof(char)); 
-  
+  	
     printf("After memset():  %s", str); 
     return 0; 
 } 
-
+void GENFUN_u8MemSet (uint8 *pu8Src, uint8 u8Char2Set, uint8 u8SizeOfList)
 void printArray(int arr[], int n) 
 { 
    for (int i=0; i<n; i++) 
@@ -151,6 +152,7 @@ void printArray(int arr[], int n)
   
 int main() 
 { 
+	u8Sizeofflist = char str[50];
     int n = 10; 
     int arr[n]; 
   
@@ -163,34 +165,43 @@ int main()
 } 
 
 
-/*sexto programa*/
-int main(int argc, const char * argv[])
-{
-    /* Create a place to store our results */
-    int result;
-
-    /* Create two arrays to hold our data */
-    char original[50];
-    char newcopy[50];
-
-    /* Copy a string into the original array */
-    strcpy(original, "C memcpy at TechOnTheNet.com");
-
-    /* Copy the first 24 characters of the original
-     array into the newcopy array */
-    result = memcpy(newcopy, original, 24);
-
-    /* Set the character at position 24 to a null (char 0)
-     in the newcopy array to ensure the string is terminated
-     (This is important since memcpy does not initialize memory
-     and printf expects a null at the end of a string) */
-    newcopy[24] = 0;
-
-    /* Display the contents of the new copy */
-    printf("%s\n", newcopy);
-
-    return 0;
+/*sexto programa*/ 
+// Function to sort the numbers using pointers 
+  void GENFUN_vSortList (uint8 *pu8Src, uint8 *pu8Dest, uint8 u8SizeOfList); void sort(int n, int* ptr) 
+{ 
+    int i, j, t; 
+  
+    // Sort the numbers using pointers 
+    for (i = 0; i < n; i++) { 
+  
+        for (j = i + 1; j < n; j++) { 
+  
+            if (*(pu8Src + j) < *(u8Sizeofflist + i))
+             { 
+  
+                t = *(u8Sizeofflist + i); 
+                *(u8Sizeofflist + i) = *(ptr + j); 
+                *(pu8Src + j) = t; 
+            } 
+        } 
+    } 
+  
+    // print the numbers 
+    for (i = 0; i < n; i++) 
+        printf("%d ", *(pu8Src + i)); 
+} 
+  
+// Driver code 
+int main() 
+{ 
+    int n = 5; 
+    int arr[] = { 0, 23, 14, 12, 9 }; 
+  
+    sort(n, arr); 
+  
+    return 0; 
 }
+
 
 /*septimo programa*/
 void sort(int n, int* ptr) 
