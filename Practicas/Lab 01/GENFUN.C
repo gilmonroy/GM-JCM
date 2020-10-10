@@ -1,5 +1,6 @@
 #include "stdio.h"
 #include"GENFUN.h"
+#include"string.h"
 void main( void  )
 {
 	printf("Testing  Genfun_vCapsoff\n");
@@ -24,7 +25,7 @@ void Genfun_vCapsoff (uint8 *pu8Src, uint8 u8SizeOfflist)
 	    u8Sizeofflist --;
 	}
 }
-
+/* Segundo problema*/
 void main(void)
 {
 	printf("Testing Genfun_vCapsOn\n");
@@ -49,11 +50,55 @@ void void Genfun_vCapsOn (uint8 *pu8Src, uint8 u8SizeOfflist)
 		u8Sizeofflist -- ;
 	}
 }
- int main(void)
- {
- printf("\n\t Escriba una oracion");
- }
- uint8 GENFUN_u8GetOccurence (uint8 *pu8Src, uint8 u8Target, uint8 u8SizeOfList)
+/*Tercer problema */
+int main()
+{
+	char *pu8Src= " COMO ESTA LA RAZA EL DIA DE HOY?";
+	char u8Target = "A";
+	char *Busqueda= NULL;
+	int i= 0;
+	uint8 GENFUN_u8GetOccurence(*pu8Src,u8Target);
+	GENFUN_u8GetOccurence =(strstr(*pu8Src,u8Target));
+	while(GENFUN_u8GetOccurence !=NULL)
+	{
+		i++;
+		GENFUN_u8GetOccurence =strstr(Busqueda+1,u8Target);
+	}
+	printf("Total de coincidencias%i\n",i);
+	if(Busqueda!=NULL)
+	{
+		printf("Se encontro el target %s\n",u8Target)
+	}
+	else
+	{
+		printf("No se encontro el target %s\n",u8Target);
+	}
+
+}
+char* uint8 GENFUN_u8GetOccurence (uint8 *pu8Src, uint8 u8Target, uint8 u8SizeOfList)
+{
+	int i;
+
+	else 
+	{
+		i=0;
+		c= u8Target [0];
+		while(u8Sizeofflist [i]  !=0)
+		{
+			if(*pu8Src[i]==c)
+			{
+				if(strncomp(*pu8Src[i],&u8Target, u8Sizeofflist)==0)
+				{
+					return &u8Target [i];
+				}
+			}
+			i++;
+		}
+		return NULL;
+	}
+
+}
+	
+/*Cuarto problema*/
+
  
-
-
