@@ -1,3 +1,4 @@
+
 #include "stdio.h"
 #include "Structs.h"
 
@@ -52,27 +53,51 @@ void main ( void )
 		{
 			if( u8InputAction == 1 )
 			{
-
+              scanf( INIT_PARKING_SLOTS);
+              while( INIT_PARKING_SLOTS !0)
+              {
+                  printf("Hay lugares disponibles: %d\n",enSector < enMaxSectors);
+              }
+              if ( INIT_PARKING_SLOTS > 0)
+              {
+                 /*Nothing to do*/
+              }
 			}
 			else if( u8InputAction == 2 )
 			{
-
+                 scanf( INIT_PARKING_SLOTS);
+                 while ( INIT_PARKING_SLOTS =0)
+                {
+                    printf("No hay lugares disponibles  %d\n",enSector > enMaxSectors);
+                }
+                if( INIT_PARKING_SLOTS < 0)
+                {
+                    /*Nothing to do*/
+                }
 			}
 			else if( u8InputAction == 3 )
 			{
-
+			  scanf( "%d"&u32MoneyEarn );
+			   
+			  printf("El dinero recaudado es: %d\n ", ShowEarnedMoney);
 			}
+			
 			else if( u8InputAction == 4 )
 			{
-
+			    scanf(" %d"&tenParkingSectors);
+			    while( enCurrentSector > tenParkingSectors)
+                  {
+                      INIT_PARKING_SLOTS --1;
+                      pritf("El Auto ha sido removido \n ");
+                  }
 			}
 			else if ( u8InputAction == 5 )
 			{
-
+                
 			}
 			else
 			{
-
+                
 			}
 			printf("\n\n");
 		}
