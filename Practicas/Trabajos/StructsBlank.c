@@ -85,19 +85,23 @@ void main ( void )
 			else if( u8InputAction == 4 )
 			{
 			    scanf(" %d"&tenParkingSectors);
-			    while( enCurrentSector > tenParkingSectors)
+			    while( enCurrentSector < tenParkingSectors)
                   {
-                      INIT_PARKING_SLOTS --1;
-                      pritf("El Auto ha sido removido \n ");
+                      INIT_PARKING_SLOTS ++1;
+                      pritf("El Auto ha sido añadido \n ");
                   }
 			}
 			else if ( u8InputAction == 5 )
 			{
-                
+                scanf(" %d"&tenParkingSectors);
+			    while( enCurrentSector > tenParkingSectors)
+                  {
+                      INIT_PARKING_SLOTS ++1;
+                      pritf("El Auto ha sido removido \n ");
 			}
 			else
 			{
-                
+                /*Nothing to do*/
 			}
 			printf("\n\n");
 		}
@@ -112,7 +116,30 @@ void main ( void )
 /*F1*/
 void ShowAvailableSlots ( tenParkingSectors enCurrentSector )
 {
-
+	scanf(tenParkingSectors);
+	if(u8InputAction==0)
+	{
+		printf("La seccion que selecciono es la 0  %s\n", {SECTOR0_SLOTS,SECTOR0_SLOTS,0,0});
+	}
+	if(u8InputAction == 1)
+	{
+		printf("La seccion que selecciono es la 1  %s\n", {SECTOR1_SLOTS,SECTOR1_SLOTS,0,0});
+	}
+	if( u8InputAction == 2)
+	{
+		printf("La seccion que selecciono es la 2  %s\n", {SECTOR1_SLOTS,SECTOR2_SLOTS,0,0});
+	}
+	}
+	if(u8InputAction == 3)
+	{
+		printf("La seccion que selecciono es la 3  %s\n", {SECTOR1_SLOTS,SECTOR3_SLOTS,0,0});
+	}
+	}
+	if(u8InputAction == 4)
+	{
+		printf("La seccion que selecciono es la 4  %s\n", {SECTOR1_SLOTS,SECTOR4_SLOTS,0,0});
+	}
+	}
 }
 
 /*F2*/
