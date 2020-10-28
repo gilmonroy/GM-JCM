@@ -33,6 +33,7 @@ void main ( void )
 	uint8 u8InputAction = 0;
 	tenParkingSectors enSector; 
 	uint8 u8ConfirmationFromAction = 0;
+	uint32 u32MoneyEarn = rand();
 	while(1)
 	{
 		fflush(stdin);
@@ -79,7 +80,7 @@ void main ( void )
 			{
 			  scanf( "%d"&u32MoneyEarn );
 			   
-			  printf("El dinero recaudado es: %d\n ", ShowEarnedMoney);
+			  printf("El dinero recaudado es: %d\n ",  u32MoneyEarn);
 			}
 			
 			else if( u8InputAction == 4 )
@@ -128,15 +129,15 @@ void ShowAvailableSlots ( tenParkingSectors enCurrentSector )
 	if( u8InputAction == 2)
 	{
 
-		printf("La seccion que selecciono es la 2  %s\n", {SECTOR1_SLOTS,SECTOR2_SLOTS,0,0});
+		printf("La seccion que selecciono es la 2  %s\n", {SECTOR2_SLOTS,SECTOR2_SLOTS,0,0});
 	}
 	if(u8InputAction == 3)
 	{
-		printf("La seccion que selecciono es la 3  %s\n", {SECTOR1_SLOTS,SECTOR3_SLOTS,0,0});
+		printf("La seccion que selecciono es la 3  %s\n", {SECTOR3_SLOTS,SECTOR3_SLOTS,0,0});
 	}
 	if(u8InputAction == 4)
 	{
-		printf("La seccion que selecciono es la 4  %s\n", {SECTOR1_SLOTS,SECTOR4_SLOTS,0,0});
+		printf("La seccion que selecciono es la 4  %s\n", {SECTOR4_SLOTS,SECTOR4_SLOTS,0,0});
 	} 
 } 
 
@@ -168,7 +169,12 @@ void ShowNotAvailableSlots ( tenParkingSectors enCurrentSector )
 /*F3*/
 void ShowEarnedMoney ( tenParkingSectors enCurrentSector )
 {
-
+	scanf(u32MoneyEarn)
+	if(u32MoneyEarn !0 *SECTOR0_SLOTS)
+	{
+		printf("La cantidad de dinero en el sector 0 es: %s\n ")
+	}
+	
 }
 /*F4*/
 uint8 u8AddCarToSector( tenParkingSectors enCurrentSector )
