@@ -112,6 +112,32 @@ void main ( void )
 		}
 
 	}
+		printf ("Ingrese las horas que tardo");
+ 			scanf ("%d", &h);
+ 			if (h>=10)
+ 				{
+				  t=h*2;
+				  printf ("\n El total a pagar es; %d",t);
+				 }
+					 else
+					 	if (h>5)
+					 		{
+					 			 t=h*3;
+					  			printf ("\n El total a pagar es: %d", t);
+							 }
+								 else
+					 				if (h>3)
+					 					{
+											t=h*4;
+											printf ("\n El total a pagar es: %d", t);
+					 					}
+					 			else
+					 			  if (h>0)
+					 				{
+					  					t=h*5;
+					 					printf ("\n El total a pagar es: %d", t); 
+					 				}
+					 					etch(); /* Pausa */
 }
 
 /*F1*/
@@ -121,24 +147,24 @@ void ShowAvailableSlots ( tenParkingSectors enCurrentSector )
 	if(u8InputAction ==0)
 	{
 		printf("La seccion que selecciono es la 0  %s\n", {SECTOR0_SLOTS,SECTOR0_SLOTS,0,0});
-	}
-	if(u8InputAction ==1)
-	{
-		printf("La seccion que selecciono es la 1  %s\n", {SECTOR1_SLOTS,SECTOR1_SLOTS,0,0});
-	}
-	if( u8InputAction == 2)
-	{
-
-		printf("La seccion que selecciono es la 2  %s\n", {SECTOR2_SLOTS,SECTOR2_SLOTS,0,0});
-	}
-	if(u8InputAction == 3)
-	{
-		printf("La seccion que selecciono es la 3  %s\n", {SECTOR3_SLOTS,SECTOR3_SLOTS,0,0});
-	}
-	if(u8InputAction == 4)
-	{
-		printf("La seccion que selecciono es la 4  %s\n", {SECTOR4_SLOTS,SECTOR4_SLOTS,0,0});
 	} 
+		if(u8InputAction ==1)
+		{
+			printf("La seccion que selecciono es la 1  %s\n", {SECTOR1_SLOTS,SECTOR1_SLOTS,0,0});
+		}
+			if( u8InputAction == 2)
+			{
+
+				printf("La seccion que selecciono es la 2  %s\n", {SECTOR2_SLOTS,SECTOR2_SLOTS,0,0});
+			}
+				if(u8InputAction == 3)
+				{
+					printf("La seccion que selecciono es la 3  %s\n", {SECTOR3_SLOTS,SECTOR3_SLOTS,0,0});
+				}
+			if(u8InputAction == 4)
+			{
+				printf("La seccion que selecciono es la 4  %s\n", {SECTOR4_SLOTS,SECTOR4_SLOTS,0,0});
+			} 
 } 
 
 /*F2*/
@@ -146,35 +172,34 @@ void ShowNotAvailableSlots ( tenParkingSectors enCurrentSector )
 {
 	while( SECTOR0_SLOTS==0)
 	{
-		printf("No hay lugares disponibles en el sector 0. %s\n" &SECTOR0_SLOTS);
+		printf("No hay lugares disponibles en el sector 0. %s\n", &SECTOR0_SLOTS);
 	}
 	if(SECTOR1_SLOTS==0)
 	{
-		printf("No hay lugares disponibles en el sector 1. %s\n" &SECTOR1_SLOTS);
+		printf("No hay lugares disponibles en el sector 1. %s\n" ,&SECTOR1_SLOTS);
 	}
 	  if(SECTOR2_SLOTS == 0)
 	{
-		printf("No hay lugares disponibles en el sector 2. %s\n" &SECTOR2_SLOTS);
+		printf("No hay lugares disponibles en el sector 2. %s\n" ,&SECTOR2_SLOTS);
 	}
 	if (SECTOR3_SLOTS ==0)
 	{
-		printf("No hay lugares disponibles en el sector 3. %s\n" &SECTOR3_SLOTS);
+		printf("No hay lugares disponibles en el sector 3. %s\n" ,&SECTOR3_SLOTS);
 	}
 	if (SECTOR4_SLOTS == 0 )
 	{
-		printf("No hay ligares disponibles en el sector 4. %s\n", &SECTOR4_SLOTS );
+		printf("No hay ligares disponibles en el sector 4. %s\n", ,&SECTOR4_SLOTS );
 	}
 }
 
 /*F3*/
 void ShowEarnedMoney ( tenParkingSectors enCurrentSector )
+int h,t;
 {
 	scanf(u32MoneyEarn)
-	if(u32MoneyEarn !0 *SECTOR0_SLOTS)
+	if(u32MoneyEarn !0 )
 	{
-		printf("La cantidad de dinero en el sector 0 es: %s\n ")
-	}
-	
+ 
 }
 /*F4*/
 uint8 u8AddCarToSector( tenParkingSectors enCurrentSector )
